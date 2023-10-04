@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "DM Sans",sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #34355B;
+
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    background-size: 200% 200% ;
+    animation : backgroundAnimation 10s ease infinite;
+    
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main{
+    width: min(42.8rem,90%);
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: .5rem;
+}
+
+/* screen1 */
+
+h1,h2{
+    width: 25.8rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+
+    margin-bottom: 1.4rem;
+}
+
+.screen1 img{
+    margin-top: 2rem;
+}
+
+/*screen2 */
+
+h2{
+    width: 30rem;
+}
+
+.hide{
+    display: none;
+}
+
+.sorte{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.7rem;
+
+    color: #000;
+    background: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem 0rem rgba(85, 85, 85, 0.50);
+
+
+    font-family: "Dancing Script",sans-serif;
+    font-size: 2.4rem;
+
+    animation : downUp 2s;
+}
+
+#openAgain{
+    margin-top: 1.7rem;
+    padding: 1.6rem;
+
+    border-radius: .4rem;
+    border: none;
+    background: #FF9500;
+
+    color:#FFFFFF;
+
+}
+
+button{
+    border: none;
+}
+
+#openAgain:hover{
+    background: #c57f1e;
+}
+
+#biscoito:hover{
+    animation: vibrate 0.3s linear infinite both;   
+}
+
+/* TESTE */
+
+
+@keyframes vibrate {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+@keyframes downUp{
+    0%{
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
